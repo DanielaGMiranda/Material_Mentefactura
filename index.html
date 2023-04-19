@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="style.css">
+    <title>Material Webinar Roblox</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-right-section">
+                <li><a href="https://byjus.com/mx/futureschool/code/">
+                    <img src="Logo.png" alt="profile" id="byjus">
+                </a></li>
+                <li><a href="https://www.tinkercad.com/">
+                    <img src="tinkercad-logo.png" alt="profile" id="tinkercad">
+                </a></li>
+                <li><a href="https://www.roblox.com/create">
+                    <img src="logo-roblox.png" alt="profile" id="Roblox">
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+    
+    <center>
+        <h1 id="titulo">Material Mentefactura</h1>
+        <hr>
+    
+    <h2>Cuenta de TinkerCAD</h2>
+    <p>Puedes utilizar esta cuenta de TinkerCAD o crear la tuya.</p>
+    <h3>Correo</h3>
+    <textarea cols='25' rows='1' id="codigo">
+AlumnoWebinar1@gmail.com
+        </textarea><br><br>
+        <button type="button" id="copyClip" data-clipboard-target="#codigo">Copiar</button>
+        <script src="clipboard.min.js"></script>
+
+    <br>
+    <h3>Contraseña</h3>
+    <textarea cols='10' rows='1' id="codigo2">
+@Roblox1234
+    </textarea><br><br>
+    <button type="button" id="bt1" class="bt1" data-clipboard-target="#codigo2">Copiar</button>
+    <script>
+    var clipboard2 = new Clipboard('.bt1');
+    </script>
+    <br>
+    <hr>
+    <p>Archivo de Roblox para descargar</p>
+    <a href="https://drive.google.com/file/d/1CzQe73xqWHUHh8WwjFgmeEEuygFdy2HJ/view?usp=sharing">Dar clic para descargar</a>
+    <br>
+    <hr>
+    <p>Plantilla con modelo de la tortuga</p>
+    <a href="https://www.tinkercad.com/codeblocks/3ZaAgZvR8lI">Dar clic para descargar</a>
+    <hr>
+    <h3>Script perder salud</h3>
+    <textarea cols='55' rows='3' id="codigo3">
+    script.Parent.Touched:Connect(function(hit)
+        hit.Parent.Humanoid.Health=hit.Parent.Humanoid.Health-5 
+    end)
+    </textarea><br><br>
+    <button type="button" id="bt2" class="bt2" data-clipboard-target="#codigo3">Copiar</button>
+    <script>
+    var clipboard2 = new Clipboard('.bt2');
+    </script>
+    <br>
+    <hr>
+    <h3>Script Puntos</h3>
+    <textarea cols='70' rows='11' id="codigo4">
+local Players = game:GetService("Players")
+local turtle = script.Parent
+
+turtle.Touched:Connect(function(hit)
+	if hit.Parent:FindFirstChild("Humanoid") then
+		
+		local player = Players:GetPlayerFromCharacter(hit.Parent)
+		player.leaderstats.Points.Value = player.leaderstats.Points.Value + 1
+		script.Parent.Transparency= 1
+		script.Disabled = true
+		script:Destroy()
+	end
+end)
+    </textarea><br>
+    <button type="button" id="bt3" class="bt3" data-clipboard-target="#codigo4">Copiar</button>
+    <script>
+    var clipboard3 = new Clipboard('.bt3');
+    </script>
+
+    <br>
+    <hr>
+    <h3>Script Súper velocidad</h3>
+    <textarea cols='55' rows='4' id="codigo5">
+script.Parent.Touched:Connect(function(speed)
+        speed.Parent.Humanoid.WalkSpeed=0
+        script.Parent:Destroy()
+end)
+    </textarea><br>
+    <button type="button" id="bt4" class="bt4" data-clipboard-target="#codigo5">Copiar</button>
+    <script>
+    var clipboard3 = new Clipboard('.bt4');
+    </script>
+
+    </center>
+        
+</div>
+<footer>
+    <ul class="footer-left">
+        <li>
+            <p>Creado por el equipo de Byju's Learning LATAM</p>
+        </li>
+    </ul>
+    
+</footer>
+</body>
+</html>
